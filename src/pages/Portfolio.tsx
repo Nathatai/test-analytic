@@ -102,6 +102,7 @@ const Portfolio = () => {
             {categories.map((category) => (
               <button
                 key={category.id}
+                id={`portfolio_filter_${category.id}`}
                 onClick={() => setActiveFilter(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-200 flex items-center space-x-2 ${
                   activeFilter === category.id
@@ -136,6 +137,7 @@ const Portfolio = () => {
                     <div className="absolute bottom-4 left-4 right-4 flex space-x-2">
                       <a
                         href={project.liveUrl}
+                        id={`project_live_${project.title.toLowerCase().replace(/[^a-z0-9]/g, '_')}`}
                         className="bg-white text-gray-900 p-2 rounded-lg hover:bg-gray-100 transition-colors"
                         title="View Live"
                       >
@@ -143,6 +145,7 @@ const Portfolio = () => {
                       </a>
                       <a
                         href={project.githubUrl}
+                        id={`project_code_${project.title.toLowerCase().replace(/[^a-z0-9]/g, '_')}`}
                         className="bg-white text-gray-900 p-2 rounded-lg hover:bg-gray-100 transition-colors"
                         title="View Code"
                       >
@@ -174,6 +177,7 @@ const Portfolio = () => {
                   <div className="flex space-x-4">
                     <a
                       href={project.liveUrl}
+                      id={`project_view_live_${project.title.toLowerCase().replace(/[^a-z0-9]/g, '_')}`}
                       className="text-blue-600 hover:text-blue-700 font-medium flex items-center group"
                     >
                       View Live
@@ -181,6 +185,7 @@ const Portfolio = () => {
                     </a>
                     <a
                       href={project.githubUrl}
+                      id={`project_view_code_${project.title.toLowerCase().replace(/[^a-z0-9]/g, '_')}`}
                       className="text-gray-600 hover:text-gray-700 font-medium flex items-center group"
                     >
                       View Code
@@ -247,6 +252,7 @@ const Portfolio = () => {
           </p>
           <Link
             to="/contact"
+            id="portfolio_cta_start_project"
             className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 inline-flex items-center group shadow-lg hover:shadow-xl"
           >
             Start Your Project

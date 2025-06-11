@@ -129,6 +129,7 @@ const Services = () => {
                     </span>
                     <Link
                       to="/contact"
+                      id={`service_quote_${service.title.toLowerCase().replace(/[^a-z0-9]/g, '_')}`}
                       className="text-blue-600 hover:text-blue-700 font-medium flex items-center group"
                     >
                       Get Quote
@@ -189,6 +190,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+              id="services_cta_get_started"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 inline-flex items-center justify-center group shadow-lg hover:shadow-xl"
             >
               Get Started Today
@@ -196,6 +198,7 @@ const Services = () => {
             </Link>
             <Link
               to="/portfolio"
+              id="services_cta_view_work"
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
             >
               View Our Work

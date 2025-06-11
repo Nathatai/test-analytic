@@ -153,7 +153,10 @@ const Blog = () => {
                       <User className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-600">{featuredPost.author}</span>
                     </div>
-                    <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center group">
+                    <button 
+                      id="blog_featured_read_more"
+                      className="text-blue-600 hover:text-blue-700 font-medium flex items-center group"
+                    >
                       Read More
                       <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
@@ -174,6 +177,7 @@ const Blog = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
+                id="blog_search"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -186,6 +190,7 @@ const Blog = () => {
               {categories.map((category) => (
                 <button
                   key={category.id}
+                  id={`blog_category_${category.id}`}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                     selectedCategory === category.id
@@ -260,7 +265,10 @@ const Blog = () => {
                       <User className="w-4 h-4 text-gray-400" />
                       <span className="text-sm text-gray-600">{post.author}</span>
                     </div>
-                    <button className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center group">
+                    <button 
+                      id={`blog_post_read_more_${post.id}`}
+                      className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center group"
+                    >
                       Read More
                       <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </button>
@@ -291,10 +299,14 @@ const Blog = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
               type="email"
+              id="blog_newsletter_email"
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
             />
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 whitespace-nowrap">
+            <button 
+              id="blog_newsletter_subscribe"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 whitespace-nowrap"
+            >
               Subscribe
             </button>
           </div>

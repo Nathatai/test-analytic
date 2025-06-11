@@ -16,18 +16,21 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
+                id="footer_social_twitter"
                 className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="#"
+                id="footer_social_github"
                 className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="#"
+                id="footer_social_linkedin"
                 className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800"
               >
                 <Linkedin className="w-5 h-5" />
@@ -40,32 +43,32 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/" id="footer_link_home" className="text-gray-400 hover:text-white transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/about" id="footer_link_about" className="text-gray-400 hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/services" id="footer_link_services" className="text-gray-400 hover:text-white transition-colors">
                   Services
                 </a>
               </li>
               <li>
-                <a href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/portfolio" id="footer_link_portfolio" className="text-gray-400 hover:text-white transition-colors">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/blog" id="footer_link_blog" className="text-gray-400 hover:text-white transition-colors">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/contact" id="footer_link_contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
                 </a>
               </li>

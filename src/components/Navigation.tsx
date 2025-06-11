@@ -22,7 +22,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" id="nav_logo" className="flex items-center space-x-2 group">
             <div className="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-700 transition-colors">
               <Zap className="w-6 h-6 text-white" />
             </div>
@@ -35,6 +35,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                id={`nav_${item.name.toLowerCase()}`}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(item.href)
                     ? 'bg-blue-100 text-blue-700'
@@ -49,6 +50,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            id="nav_mobile_toggle"
             className="md:hidden p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-100"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -64,6 +66,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                id={`nav_mobile_${item.name.toLowerCase()}`}
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 ${
                   isActive(item.href)

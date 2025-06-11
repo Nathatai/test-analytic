@@ -98,7 +98,7 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
-                        id="name"
+                        id="contact_form_name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
@@ -113,7 +113,7 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
-                        id="email"
+                        id="contact_form_email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -130,7 +130,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      id="subject"
+                      id="contact_form_subject"
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
@@ -145,7 +145,7 @@ const Contact = () => {
                       Message
                     </label>
                     <textarea
-                      id="message"
+                      id="contact_form_message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
@@ -158,6 +158,7 @@ const Contact = () => {
                   
                   <button
                     type="submit"
+                    id="contact_form_submit"
                     className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center justify-center group shadow-lg hover:shadow-xl"
                   >
                     Send Message

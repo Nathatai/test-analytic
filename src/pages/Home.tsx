@@ -42,6 +42,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+                id="hero_get_started"
                 className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center justify-center group shadow-lg hover:shadow-xl"
               >
                 Get Started
@@ -49,6 +50,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/about"
+                id="hero_learn_more"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-200"
               >
                 Learn More
@@ -142,6 +144,7 @@ const Home = () => {
           </div>
           <Link
             to="/contact"
+            id="cta_start_project"
             className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 inline-flex items-center group shadow-lg hover:shadow-xl"
           >
             Start Your Project
