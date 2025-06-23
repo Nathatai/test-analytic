@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Twitter, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -43,34 +44,34 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" id="footer_link_home" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/" id="footer_link_home" className="text-gray-400 hover:text-white transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" id="footer_link_about" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/about" id="footer_link_about" className="text-gray-400 hover:text-white transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" id="footer_link_services" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/services" id="footer_link_services" className="text-gray-400 hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/portfolio" id="footer_link_portfolio" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/portfolio" id="footer_link_portfolio" className="text-gray-400 hover:text-white transition-colors">
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/blog" id="footer_link_blog" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/blog" id="footer_link_blog" className="text-gray-400 hover:text-white transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" id="footer_link_contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/contact" id="footer_link_contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
