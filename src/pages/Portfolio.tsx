@@ -102,7 +102,7 @@ const Portfolio = () => {
             {categories.map((category) => (
               <button
                 key={category.id}
-                id={`portfolio_filter_${category.id}`}
+                // id={`portfolio_filter_${category.id}`}
                 onClick={() => setActiveFilter(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-200 flex items-center space-x-2 ${
                   activeFilter === category.id
@@ -111,7 +111,7 @@ const Portfolio = () => {
                 }`}
               >
                 <Filter className="w-4 h-4" />
-                <span>{category.name}</span>
+                <span id={`portfolio_filter_${category.id}`}>{category.name}</span>
               </button>
             ))}
           </div>
