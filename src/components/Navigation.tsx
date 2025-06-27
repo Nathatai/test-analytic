@@ -35,6 +35,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                data-test-id={`data_test_id_nav_${item.name.toLowerCase()}`}
                 id={`nav_${item.name.toLowerCase()}`}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(item.href)
